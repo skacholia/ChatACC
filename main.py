@@ -2,7 +2,7 @@ import pinecone
 import streamlit as st
 from streamlit_chat import message
 from langchain.llms import OpenAIChat
-from langchain.chains import VectorDBQA
+from langchain.chains import ChatVectorDBChain
 from langchain.vectorstores import Pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
 
