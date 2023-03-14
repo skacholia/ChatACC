@@ -12,6 +12,8 @@ pinecone.init(
     environment=st.secrets["env"]
 )
 index_name = "acc-municode"
+
+@st.cache_resource
 acc_pinecone = Pinecone.from_existing_index(index_name=index_name,embedding=embeddings)
 query = st.text_input("`Please ask a question about ACC's Code of Ordinances:` ","How many parking spaces does a bowling alley need")
 info = " In which section can I find this information?"
