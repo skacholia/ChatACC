@@ -1,7 +1,7 @@
 openai
 streamlit
 streamlit_chat
-pinecone
+pinecone-client
 langchain
 matplotlib
 plotly
