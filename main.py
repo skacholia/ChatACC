@@ -8,8 +8,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 
 embeddings = OpenAIEmbeddings()
 pinecone.init(
-    api_key=st.secrets
-    environment=st.secrets
+    api_key=st.secrets["pinecone"]
+    environment=st.secrets["env"]
 )
 index_name = "acc-municode"
 acc_pinecone = Pinecone.from_existing_index(index_name=index_name,embedding=embeddings)
